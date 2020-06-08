@@ -1,0 +1,16 @@
+{
+  "title": "VisualNode",
+  "main": {
+    "sourceDirectory": "src/main",
+    "webpackConfig": "webpack.config.js"
+  },
+  "renderer": {
+    "dll": [
+      "async"
+    ],
+    "sourceDirectory": "src/render",
+    "template": "src/render/index.html",
+    "webpackConfig": "webpackrnd.config.js",
+    "webpackDllConfig": "webpackdll.config.js"
+  }
+}

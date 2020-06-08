@@ -1,0 +1,54 @@
+{
+  "name": "visualnode",
+  "version": "1.0.0",
+  "description": "An app written in node & react for visualizing nodejs code.",
+  "main": "dist/visualnode.main.js",
+  "scripts": {
+    "test": "npm run pack:dev && npx electron .",
+    "pack:dll": "npx webpack --config webpackdll.config.js",
+    "pack:render": "npx webpack --config webpackrnd.config.js",
+    "pack:main": "npx webpack --config webpack.config.js",
+    "pack:all": "npm run pack:dll && npm run pack:render && npm run pack:main",
+    "pack:dev": "npm run pack:render && npm run pack:main",
+    "pack:dev:render": "npm run pack:dll && npx webpack --config webpackrnd.config.js --watch",
+    "pack:dev:main": "npx webpack --config webpack.config.js --watch",
+    "pack": "npm run pack:render && npm run pack:main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Floffah/visualnode.git"
+  },
+  "author": "Floffah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Floffah/visualnode/issues"
+  },
+  "homepage": "https://github.com/Floffah/visualnode#readme",
+  "devDependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "antd": "^4.3.3",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "electron": "^9.0.3",
+    "electron-builder": "^22.7.0",
+    "electron-debug": "^3.1.0",
+    "file-loader": "^6.0.0",
+    "loader": "^2.1.1",
+    "react": "^16.13.1",
+    "react-devtools": "^4.7.0",
+    "react-dom": "^16.13.1",
+    "sass": "^1.26.8",
+    "sass-loader": "^8.0.2",
+    "styles-loader": "^2.0.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "axios": "^0.19.2",
+    "custom-electron-titlebar": "^3.2.2-hotfix62"
+  }
+}
