@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "async": "^3.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "custom-electron-titlebar": "^3.2.2-hotfix62"
   }
 }
